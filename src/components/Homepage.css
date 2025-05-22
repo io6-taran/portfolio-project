@@ -5,17 +5,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 90vh;
+  min-height: 76vh;
   padding: 60px 80px;
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: white;
   gap: 50px;
+
   flex-wrap: wrap;
 }
 
 .left-section {
   flex: 1;
   min-width: 300px;
+  
 }
 
 .left-section h1 {

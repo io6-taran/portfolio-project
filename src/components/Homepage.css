@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.homepage {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 90vh;
+  padding: 60px 80px;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.left-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.left-section h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.left-section .passion {
+  font-size: 22px;
+  color: #00ffc8;
+  margin-bottom: 15px;
+  min-height: 30px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  background-color: #00ffc8;
+  animation: blink 1s infinite;
+  margin-left: 3px;
+  vertical-align: bottom;
+}
+
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+.left-section p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  max-width: 400px;
+}
+
+.contact-icons a {
+  color: white;
+  font-size: 28px;
+  margin-right: 20px;
+  transition: color 0.3s ease;
+}
+
+.contact-icons a:hover {
+  color: #00ffc8;
+}
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #00ffc8;
+  color: #0d0d0d;
+  font-weight: 600;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: #00ccaa;
+}
+
+.right-section {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.right-section img {
+  max-width: 320px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 255, 200, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.right-section img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .homepage {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  .right-section, .left-section {
+    min-width: 100%;
+    text-align: center;
+  }
+  .contact-icons a {
+    font-size: 24px;
+    margin: 0 10px;
+  }
+  .resume-btn {
+    margin-top: 20px;
+  }
+}

@@ -52,37 +52,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Section 3: Skills Circle */}
-      <section className="skills-section">
-        <h2>Technologies I Love</h2>
-        <div className="skills-circle">
-          <span className="skill">HTML</span>
-          <span className="skill">CSS</span>
-          <span className="skill">JavaScript</span>
-          <span className="skill">React</span>
-          <span className="skill">Node</span>
-          <span className="skill">MongoDB</span>
-        </div>
-      </section>
-
-      {/* Section 4: Timeline */}
-      <section className="timeline-section">
-        <h2>My Journey</h2>
-        <div className="timeline">
-          <div className="timeline-item">
-            <span>2020</span> Started B.Tech in Computer Science
-          </div>
-          <div className="timeline-item">
-            <span>2022</span> Learned MERN stack
-          </div>
-          <div className="timeline-item">
-            <span>2023</span> Built Student Network Project
-          </div>
-          <div className="timeline-item">
-            <span>2025</span> Preparing for placements
-          </div>
-        </div>
-      </section>
+      
+     
     </div>
   );
 };

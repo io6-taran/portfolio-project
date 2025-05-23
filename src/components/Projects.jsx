@@ -1,59 +1,57 @@
 import React from "react";
 import "./Projects.css";
 
-const projectsData = [
+const projectData = [
   {
-    id: 1,
-    title: "Awesome Task Tracker",
-    description: "A web app that helps users track their tasks efficiently with deadlines and reminders.",
-    technologies: ["React", "Node.js", "MongoDB"],
-    image: "/images/task-tracker.png",
-    liveDemo: "https://live-demo-link.com",
-    github: "https://github.com/yourusername/task-tracker",
+    title: "Student Network Platform",
+    description: "A full-stack social platform for students using React, Node.js, MySQL.",
+    tech: ["React", "Node.js", "MySQL"],
+    image: "https://via.placeholder.com/600x300?text=Student+Network",
   },
   {
-    id: 2,
+    title: "Weather App",
+    description: "Real-time weather app using React and OpenWeatherMap API.",
+    tech: ["React", "API", "CSS"],
+    image: "https://via.placeholder.com/600x300?text=Weather+App",
+  },
+  {
     title: "Portfolio Website",
-    description: "My personal portfolio website to showcase projects and skills.",
-    technologies: ["React", "CSS", "Netlify"],
-    image: "/images/portfolio.png",
-    liveDemo: "https://your-portfolio-site.com",
-    github: "https://github.com/yourusername/portfolio",
+    description: "A personal portfolio built with React and styled-components.",
+    tech: ["React", "CSS", "Bootstrap"],
+    image: "https://via.placeholder.com/600x300?text=Portfolio+Website",
   },
-  {
-    id: 3,
-    title: "E-commerce Store",
-    description: "Full stack e-commerce store with payment integration and admin panel.",
-    technologies: ["React", "Express", "Stripe"],
-    image: "/images/ecommerce.png",
-    liveDemo: "https://ecommerce-demo.com",
-    github: "https://github.com/yourusername/ecommerce-store",
-  },
-  // Add more projects here
 ];
 
 const Projects = () => {
   return (
-    <div className="projects-container">
-      {projectsData.map(({ id, title, description, technologies, image, liveDemo, github }) => (
-        <div key={id} className="project-card">
-          <img className="project-image" src={image} alt={`${title} Screenshot`} />
-          <div className="project-content">
-            <h3 className="project-title">{title}</h3>
-            <p className="project-description">{description}</p>
-            <div className="tech-badges">
-              {technologies.map((tech, index) => (
-                <span key={index} className="tech-badge">{tech}</span>
-              ))}
-            </div>
-            <div className="project-links">
-              <a href={liveDemo} target="_blank" rel="noopener noreferrer">Live Demo</a>
-              <a href={github} target="_blank" rel="noopener noreferrer">GitHub</a>
+    <section className="projects-section">
+      <div className="projects-intro">
+        <h2>My Projects</h2>
+        <p>
+          Welcome to the projects section! Here, you'll find a collection of my personal and collaborative projects.
+          These projects are built using technologies like{" "}
+          <strong>React, Node.js, MySQL, and Bootstrap</strong>.
+          Each one reflects my skills, creativity, and problem-solving capabilities in full-stack web development.
+        </p>
+      </div>
+
+      <div className="project-cards-container">
+        {projectData.map((project, index) => (
+          <div key={index} className="project-card">
+            <img src={project.image} alt={project.title} className="project-image" />
+            <div className="project-info">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <div className="project-tech">
+                {project.tech.map((techItem, i) => (
+                  <span key={i} className="tech-badge">{techItem}</span>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </section>
   );
 };
 

@@ -26,36 +26,47 @@ const Homepage = () => {
 
   return (
     <div className="homepage">
-      <div className="left-section">
-        <h1>Taranpreet Kaur</h1>
-        <h3 className="passion">{typedText}<span className="cursor">|</span></h3>
-        <p>
-          Passionate web developer creating responsive and modern websites.
-        </p>
-        <div className="contact-icons">
-          <a href="mailto:taranpreet@example.com" title="Email">
-            <FaEnvelope />
-          </a>
-          <a href="https://instagram.com/yourinsta" target="_blank" rel="noreferrer" title="Instagram">
-            <FaInstagram />
-          </a>
-          <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noreferrer" title="LinkedIn">
-            <FaLinkedin />
-          </a>
-        </div>
+      <img src={myImage} alt="Taranpreet Kaur" className="profile-image" />
+      
+      <h1>Taranpreet Kaur</h1>
+      <h3 className="passion">
+        {typedText}
+        <span className="cursor">|</span>
+      </h3>
+      <p>
+        Passionate web developer creating responsive and modern websites.
+      </p>
+
+      <div className="contact-icons">
+        <a href="mailto:taranpreet@example.com" title="Email">
+          <FaEnvelope />
+        </a>
         <a
-          href="/Taranpreet-Kaur-Resume.pdf"
-          download
-          className="resume-btn"
-          title="Download Resume"
+          href="https://instagram.com/yourinsta"
+          target="_blank"
+          rel="noreferrer"
+          title="Instagram"
         >
-          <FaDownload /> Download Resume
+          <FaInstagram />
+        </a>
+        <a
+          href="https://linkedin.com/in/yourlinkedin"
+          target="_blank"
+          rel="noreferrer"
+          title="LinkedIn"
+        >
+          <FaLinkedin />
         </a>
       </div>
 
-      <div className="right-section">
-        <img src={myImage} alt="Taranpreet Kaur" />
-      </div>
+      <a
+        href="/Taranpreet-Kaur-Resume.pdf"
+        download
+        className="resume-btn"
+        title="Download Resume"
+      >
+        <FaDownload /> Download Resume
+      </a>
     </div>
   );
 };
